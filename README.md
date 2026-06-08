@@ -1,0 +1,1 @@
+# vSphere-snapshot-manager
