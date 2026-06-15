@@ -14,3 +14,8 @@ In case you want to use some part of the code, it is not a problem to use anythi
 Alternatively, the application can be converted to exe (functionality verified). Instructions are here: https://wiki.speedfiregaming.cz/en/navody/ps1-to-exe
 
 If you need I can make English version too
+
+
+GUI:
+<img width="819" height="393" alt="image" src="https://github.com/user-attachments/assets/a276d953-4ddd-40d9-be08-2b685857c28c" />
+<img width="814" height="386" alt="image" src="https://github.com/user-attachments/assets/0ca009c5-af9a-44ed-89ea-e31e6fcf7e54" />
