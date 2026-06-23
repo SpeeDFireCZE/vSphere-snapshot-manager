@@ -166,6 +166,7 @@ function Show-Popup {
     $cw = 380
     $ch = [Math]::Min([Math]::Max($sz.Height + 96, 130), 500)
     $f = New-Object System.Windows.Forms.Form
+    $f.AutoScaleMode = [System.Windows.Forms.AutoScaleMode]::None
     $f.Text = $title
     $f.FormBorderStyle = 'FixedDialog'
     $f.MaximizeBox = $false; $f.MinimizeBox = $false; $f.ShowInTaskbar = $false
@@ -424,7 +425,8 @@ $main_form.ForeColor = "white"
 #$main_form.Width = 410
 #$main_form.Height = 400
 $main_form.AutoSize = $false
-$main_form.AutoSizeMode = 'GrowAndShrink'; $main_form.ClientSize = New-Object System.Drawing.Size(815,365); $main_form.FormBorderStyle = 'FixedSingle'; $main_form.Font = New-Object System.Drawing.Font -ArgumentList @('Segoe UI',[float]9)
+$main_form.AutoScaleMode = [System.Windows.Forms.AutoScaleMode]::None
+$main_form.AutoSizeMode = 'GrowAndShrink'; $main_form.ClientSize = New-Object System.Drawing.Size(815,349); $main_form.FormBorderStyle = 'FixedSingle'; $main_form.Font = New-Object System.Drawing.Font -ArgumentList @('Segoe UI',[float]9)
 #$main_form.FormBorderStyle = 8
 $main_form.MaximizeBox = $false
 #$main_form.FormBorderStyle = 'Sizable'
@@ -539,6 +541,7 @@ $main_form.Controls.Add($tabSep)
 $tabControl = New-Object System.Windows.Forms.TabControl
 $tabControl.Location = New-Object System.Drawing.Point(-4, 35)
 $tabControl.Size = New-Object System.Drawing.Size(823, 320)
+$tabControl.Anchor = 'Top,Bottom,Left,Right'
 $tabControl.DrawMode = [System.Windows.Forms.TabDrawMode]::OwnerDrawFixed
 $tabControl.ItemSize = New-Object System.Drawing.Size(160, 26)
 $tabControl.SizeMode = 'Fixed'
@@ -710,7 +713,8 @@ function get-textinfo{
 $infotextBoxmenu1 = New-Object System.Windows.Forms.ListBox
 $infotextBoxmenu1.SelectionMode = "MultiExtended"
 $infotextBoxmenu1.Location = New-Object System.Drawing.Point(5,70)
-$infotextBoxmenu1.Size = New-Object System.Drawing.Size(805,210)
+$infotextBoxmenu1.IntegralHeight = $false
+$infotextBoxmenu1.Size = New-Object System.Drawing.Size(805,209)
 $tabPage1.Controls.Add($infotextBoxmenu1)
 
 $infotextBoxmenu1.Add_KeyDown({
@@ -809,6 +813,7 @@ $button4menu1.Add_Click({
     }
 
     $Script:delForm = New-Object System.Windows.Forms.Form
+    $Script:delForm.AutoScaleMode = [System.Windows.Forms.AutoScaleMode]::None
     $Script:delForm.Text = "Mazání snapshotu"
     $Script:delForm.Size = New-Object System.Drawing.Size(400,150)
     $Script:delForm.StartPosition = "CenterScreen"
@@ -1039,6 +1044,7 @@ $button1menu2.Add_Click({
 
     # --- Progres okno ---
     $Script:createForm = New-Object System.Windows.Forms.Form
+    $Script:createForm.AutoScaleMode = [System.Windows.Forms.AutoScaleMode]::None
     $Script:createForm.Text = "Vytváření snapshotu"
     $Script:createForm.Size = New-Object System.Drawing.Size(400,150)
     $Script:createForm.StartPosition = "CenterScreen"
