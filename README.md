@@ -1,4 +1,5 @@
 # vSphere-snapshot-manager
+## od verze 1.0.8 pomáhá AI
 Nejsem programátor, tudíž to není dokonalé a spousta věcí lze udělat jinak. Za reakci a návrhy na zlepšení/rozšíření budu rád. Jedná se o GUI aplikaci/script napsanou v powershellu.
 
 V případě že chcete využít nějakou část kódu tak není problém využít cokoli. Pokud chcete používat aplikaci celkově a převedete si ji do EXE, tak poprosím o oTAGování v descriptionu nebo Copyrightu. Díky moc.
